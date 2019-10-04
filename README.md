@@ -1,5 +1,5 @@
 # fizzbuzz
-Simply download the file, open it and run the test.
+Simply copy the code from fizzbuzz.html and paste it in text editor(i have used VS code), save it with .html and run it.
 The program prompts the user for a number which is the upper limit.
 Displays all the numbers except:
   if the number is divisible by 3, it displays 'fizz'
