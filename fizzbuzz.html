@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first JavaScript Program</title>
+</head>
+<body>
+    <div class="fullScreen">
+        <div class="content">
+            <p>Please click the button to enter the number you want to print:</p>
+            <button onclick="promptForNumber();">Enter Number</button>
+            <!-- section to display the list of the scores using list item-->
+            <div id="displaySection"></div>
+        </div>
+    </div>
+    <script>
+        var ul = document.createElement('ul');
+        ul.setAttribute('id','scoreList');
+
+         var scores = [] // array to score the score from user
+
+         // function to prompt the user to enter the score until they stop it
+         function promptForNumber(){
+             var selection = parseInt(window.prompt("Please enter the number.", ""), 10);
+             console.log(selection);
+             do{
+                if(selection % 3 == 0 && selection % 5 != 0){
+                  scores.push('fizz');
+                }
+                else if(selection % 5 == 0 && selection %3 != 0){
+                  scores.push('buzz');
+                }
+                else if(selection % 3 == 0 && selection % 5 == 0){
+                  scores.push('fizz' + 'buzz');
+                }
+                else {
+                  scores.push(selection);
+                }
+
+                selection--;
+             } while(selection > 0)
+
+
+           displayData();
+         }
+
+        // function to display the data on screen
+        function displayData(){
+          document.getElementById('displaySection').appendChild(ul);
+
+          scores.forEach(renderScoreList);
+        }
+
+        // function to render the elements on the page
+        function renderScoreList(element, index, arr) {
+          var li = document.createElement('li');
+          li.setAttribute('class','item');
+
+          ul.appendChild(li);
+
+          li.innerHTML=li.innerHTML + element;
+        }
+       
+    </script>
+</body>
+</html>
