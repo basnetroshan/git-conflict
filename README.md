@@ -7,3 +7,5 @@ Displays all the numbers except:
   else if the number is divisible by both 3 and 5, it displays 'fizzbuzz'
   else it displays the number as it is.
 It displays the number in a descending order to 1.   
+
+Thank you
