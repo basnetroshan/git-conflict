@@ -8,4 +8,4 @@ Displays all the numbers except:
   else it displays the number as it is.
 It displays the number in a descending order to 1.   
 
-Thank you
+Thank you - Basnet
