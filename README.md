@@ -9,3 +9,4 @@ Displays all the numbers except:
 It displays the number in a descending order to 1.   
 
 Thank you - Basnet
+Thank you - Roshan
